@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #f0f2f5 0%, #c3cfe2 100%);
+        }
+        .card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 300px;
+        }
+        h1 { color: #333; font-size: 24px; margin-bottom: 10px; }
+        p { color: #666; margin-bottom: 30px; }
+        
+        #playBtn {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+        }
+        #playBtn:hover {
+            background-color: #357ae8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(66, 133, 244, 0.4);
+        }
+        #playBtn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Henok Abebe</h1>
+        <p>Ema (Ethiopian Music)</p>
+        
+        <audio id="myAudio">
+            <source src="REPLACE_WITH_YOUR_LINK/music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <button id="playBtn" onclick="toggleMusic()">🎵 Play Music</button>
+    </div>
+
+    <script>
+        function toggleMusic() {
+            var audio = document.getElementById("myAudio");
+            var btn = document.getElementById("playBtn");
+
+            if (audio.paused) {
+                audio.play();
+                btn.innerHTML = "⏸ Pause Music";
+                btn.style.backgroundColor = "#ea4335"; // Changes to red when playing
+            } else {
+                audio.pause();
+                btn.innerHTML = "🎵 Play Music";
+                btn.style.backgroundColor = "#4285f4"; // Back to blue when paused
+            }
+        }
+    </script>
+
+</body>
+</html>
