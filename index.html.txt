@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Music App</title>
+    <title>Henok Abebe - Music App</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,38 +12,38 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background: linear-gradient(135deg, #f0f2f5 0%, #c3cfe2 100%);
+            /* A nice deep blue gradient background */
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
         }
         .card {
-            background: white;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
             padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
             text-align: center;
             width: 300px;
         }
-        h1 { color: #333; font-size: 24px; margin-bottom: 10px; }
-        p { color: #666; margin-bottom: 30px; }
+        h1 { margin: 0; font-size: 24px; color: #fff; }
+        p { opacity: 0.9; margin-bottom: 30px; font-size: 14px; }
         
         #playBtn {
-            background-color: #4285f4;
-            color: white;
+            background-color: #ffffff;
+            color: #1e3c72;
             border: none;
-            padding: 18px 40px;
-            font-size: 18px;
+            padding: 20px 50px;
+            font-size: 16px;
             font-weight: bold;
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         #playBtn:hover {
-            background-color: #357ae8;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(66, 133, 244, 0.4);
-        }
-        #playBtn:active {
-            transform: translateY(0);
+            transform: scale(1.08);
+            background-color: #f8f9fa;
         }
     </style>
 </head>
@@ -51,10 +51,10 @@
 
     <div class="card">
         <h1>Henok Abebe</h1>
-        <p>Ema (Ethiopian Music)</p>
+        <p>Ema - Amharic Music</p>
         
         <audio id="myAudio">
-            <source src="REPLACE_WITH_YOUR_LINK/music.mp3" type="audio/mpeg">
+            <source src="https://boldinfoplusnews-maker.github.io/March-8/music.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
 
@@ -69,11 +69,9 @@
             if (audio.paused) {
                 audio.play();
                 btn.innerHTML = "⏸ Pause Music";
-                btn.style.backgroundColor = "#ea4335"; // Changes to red when playing
             } else {
                 audio.pause();
                 btn.innerHTML = "🎵 Play Music";
-                btn.style.backgroundColor = "#4285f4"; // Back to blue when paused
             }
         }
     </script>
