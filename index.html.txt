@@ -54,7 +54,7 @@
         <p>Ema - Amharic Music</p>
         
         <audio id="myAudio">
-            <source src="https://boldinfoplusnews-maker.github.io/March-8/music.mp3" type="audio/mpeg">
+            <source src="https://github.com/boldinfoplusnews-maker/March-8/raw/refs/heads/main/music.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
 
